@@ -64,6 +64,33 @@ miReproductor.pausar();
 miReproductor.detener();
 
 //  Ejercicio 4: Carrito de Compras con Descuentos (manejo de estados en un objeto usando métodos y condicionales (if/else)).
+function Carrito() {
+    this.productos = [];
+    this.total = 0;
+    this.agregarProducto = function(nombre, precio) {
+    this.productos.push({ nombre, precio });
+    this.total += precio;
+    console.log(`Producto agregado: ${nombre} ($${precio})`);
+    };
+    this.calcularDescuento = function() {
+    if (this.total > 100) {
+        const descuento = this.total * 0.10;
+        const totalConDescuento = this.total - descuento;
+        console.log(`Total: $${this.total} Descuento 10% aplicado. Total final: $${totalConDescuento.toFixed(2)}`);
+    } else if (this.total > 50 && this.total <= 100) {
+        const descuento = this.total * 0.05;
+        const totalConDescuento = this.total - descuento;
+        console.log(`Total: $${this.total} Descuento 5% aplicado. Total final: $${totalConDescuento.toFixed(2)}`);
+    } else {
+        console.log(`Total sin descuento: $${this.total}`);
+    }
+    };
+}
+const miCarrito = new Carrito();
+miCarrito.agregarProducto("Camiseta", 40);
+miCarrito.agregarProducto("Pantalón", 70);
+miCarrito.agregarProducto("Zapatos", 50);
+miCarrito.calcularDescuento();
 
 
 

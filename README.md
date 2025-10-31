@@ -36,7 +36,7 @@ música...".
 Ejercicio 4: Carrito de Compras con Descuentos (manejo de estados en un objeto 
 usando métodos y condicionales (if/else)).
 Tareas:
-1. Crea un objeto Carrito usando una función constructora o clase que tenga:
+1.Crea un objeto Carrito usando una función constructora o clase que tenga:
 •Una propiedad productos (array vacío).
 •Una propiedad total (inicialmente 0).
 2.Implementa estos métodos:
